@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color1: hsl(31, 77%, 52%);
+  --primary-color2: hsl(184, 100%, 22%);
+  --primary-color3: hsl(179, 100%, 13%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --white-color: hsl(0, 0%, 95%);
+}
+
+html {
+  font-family: 'Lexend+Deca', sans-serif;
+  font-size: 15px;
+  color: var(--paragraph-color);
+  background-color: var(--white-color);
+  line-height: 1.5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* main-box */
+.main-box {
+  display: flex;
+  max-width: 900px;
+}
+
+/* card */
+.main-box .card{
+  padding: 45px;
+}
+
+.main-box .card h1{
+  margin: 15px 0;
+}
+
+.main-box .card:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.main-box .card:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+/* button */
+.main-box .card button {
+  margin-top: 60px;
+  border: 2px solid var(--white-color);
+  outline: none;
+  background-color: var(--white-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Lexend+Deca', sans-serif;
+  transition: 0.5s;
+}
+
+.main-box .card button:hover {
+  background-color: inherit;
+  color: var(--white-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--white-color);
+  font-weight: 700;
+  font-family: 'Big Shoulders Display', sans-serif;
+}
+
+.bg-orange {
+  background-color: var(--primary-color1);
+}
+
+.bg-cyan {
+  background-color: var(--primary-color2);
+}
+
+.bg-dark-cyan {
+  background-color: var(--primary-color3);
+}
+
+.btn-orange {
+  color: var(--primary-color1);
+}
+
+.btn-cyan {
+  color: var(--primary-color2);
+}
+
+.btn-dark-cyan {
+  color: var(--primary-color3);
+}
+
+/* Responsive */
+
+@media (max-width: 540px) {
+  html {
+    display: block;
+    padding: 20px;
+  }
+  .main-box {
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  .main-box .card:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .main-box .card:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
